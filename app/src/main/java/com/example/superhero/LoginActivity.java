@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = mUsername.getText().toString();
+                /*String username = mUsername.getText().toString();
                 String password = mPassword.getText().toString();
 
                 if (username.equals("admin") && password.equals("0000")) {
@@ -41,7 +41,9 @@ public class LoginActivity extends AppCompatActivity {
                     if (!password.equals("0000")) {
                         mPassword.setError("incorrect password!");
                     }
-                }
+                }*/
+
+                startActivity(new Intent(LoginActivity.this, DashboardActivity.class));
             }
         });
     }

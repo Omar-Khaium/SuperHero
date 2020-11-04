@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_person"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/dashboard_list_item_name"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Superman"
+            android:textColor="@color/inputTextColor"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/dashboard_list_item_can_fly"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_fly"
+            app:tint="@color/purple_700" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:adjustViewBounds="true"
+                android:gravity="center_vertical|end"
+                android:scaleType="center"
+                android:src="@drawable/ic_power"
+                app:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/dashboard_list_item_power"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical|end"
+                android:maxLines="1"
+                android:text="80"
+                android:textColor="@color/inputTextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:adjustViewBounds="true"
+                android:gravity="center_vertical|end"
+                android:scaleType="center"
+                android:src="@drawable/ic_stamina"
+                app:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/dashboard_list_item_stamina"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical|end"
+                android:maxLines="1"
+                android:text="80"
+                android:textColor="@color/inputTextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="12dp"
+                android:adjustViewBounds="true"
+                android:gravity="center_vertical|end"
+                android:scaleType="center"
+                android:src="@drawable/ic_charisma"
+                app:tint="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/dashboard_list_item_charisma"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical|end"
+                android:maxLines="1"
+                android:text="80"
+                android:textColor="@color/inputTextColor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_list_item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:alpha=".1"
+        android:orientation="horizontal"
+        android:background="@color/inputTextColor" />
+</LinearLayout>
