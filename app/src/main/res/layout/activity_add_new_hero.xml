@@ -4,17 +4,241 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AddNewHeroActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:elevation="3dp"
         app:navigationIcon="?attr/homeAsUpIndicator"
         app:title="Add Super Hero"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Title"
-        app:titleTextColor="@color/inputTextColor"
-        android:elevation="3dp"/>
+        app:titleTextColor="@color/inputTextColor" />
+
+    <EditText
+        android:id="@+id/input_hero_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/inputBackgroundColor"
+        android:hint="@string/input_add_hero_name"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputHintColor" />
+
+    <EditText
+        android:id="@+id/input_hero_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/inputBackgroundColor"
+        android:hint="@string/input_add_hero_category"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColor="@color/inputTextColor"
+        android:textColorHint="@color/inputHintColor" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_power"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/inputTextColor" />
+
+        <LinearLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:background="@color/purple_700">
+
+            <TextView
+                android:id="@+id/input_hero_power_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/input_hero_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="16dp"
+        android:max="100"
+        android:progressTint="@color/purple_700"
+        android:thumbTint="@color/purple_700"
+        app:tickMark="@color/purple_700" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_stamina"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stamina"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/inputTextColor" />
+
+        <LinearLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:background="@color/purple_700">
+
+            <TextView
+                android:id="@+id/input_hero_stamina_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/input_hero_stamina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="16dp"
+        android:max="100"
+        android:progressTint="@color/purple_700"
+        android:thumbTint="@color/purple_700"
+        app:tickMark="@color/purple_700" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_charisma"
+            app:tint="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charisma"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/inputTextColor" />
+
+        <LinearLayout
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:background="@color/purple_700">
+
+            <TextView
+                android:id="@+id/input_hero_charisma_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/input_hero_charisma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="16dp"
+        android:max="100"
+        android:progressTint="@color/purple_700"
+        android:thumbTint="@color/purple_700"
+        app:tickMark="@color/purple_700" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/input_hero_can_fly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Can fly ?"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/inputTextColor"
+        android:padding="0dp"/>
+
+    <Button
+        android:id="@+id/input_save_hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/purple_700"
+        android:text="@string/input_add_hero_submit"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>

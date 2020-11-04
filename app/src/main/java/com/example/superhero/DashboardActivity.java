@@ -62,4 +62,18 @@ public class DashboardActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(mCategorySpinner!=null && mSuperHeroList!=null) {
+            ArrayAdapter<String> spinnerAdapter =
+                    new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, database.getCategories());
+            spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            mCategorySpinner.setAdapter(spinnerAdapter);
+
+            mSuperHeroAdapter = new SuperHeroAdapter(this, database.getData(mCategorySpinner.getSelectedItem().toString()));
+            mSuperHeroList.setAdapter(mSuperHeroAdapter);
+        }
+    }
 }

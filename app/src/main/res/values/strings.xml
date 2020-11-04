@@ -3,5 +3,8 @@
     <string name="input_username_hint">Enter your username</string>
     <string name="input_password_hint">Enter your password</string>
     <string name="input_submit">Login</string>
+    <string name="input_add_hero_name">Enter name</string>
+    <string name="input_add_hero_category">Enter category</string>
+    <string name="input_add_hero_submit">Submit</string>
     <string name="todo">TODO</string>
 </resources>

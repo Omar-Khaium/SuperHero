@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Database {
 
-    ArrayList<SuperHero> localData = new ArrayList<SuperHero>(Arrays.asList(
+    public static ArrayList<SuperHero> localData = new ArrayList<SuperHero>(Arrays.asList(
             new SuperHero(0, "Superman", "DC", 93, 95, 40, true),
             new SuperHero(1, "Batman", "DC", 65, 75, 80, false),
             new SuperHero(2, "Spider man", "Marvel", 60, 85, 75, false)
@@ -38,5 +38,8 @@ public class Database {
         return categories;
     }
 
+    public void addData(SuperHero hero) {
+        localData.add(hero);
+    }
 
 }
